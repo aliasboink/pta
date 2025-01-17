@@ -26,7 +26,7 @@ class Importer(importer.ImporterProtocol):
     def identify(self, file):
         # Match if the filename is in the specified format
         return re.match(
-            r"RO\d{2}BTRLRONCRT\d+-\d{2}\.\d{2}\.\d{4}-\d{2}\.\d{2}\.\d{4}\.csv",
+            r"RO\d{2}BTRL" + self.currency + "CRT\d+-\d{2}\.\d{2}\.\d{4}-\d{2}\.\d{2}\.\d{4}\.csv",
             path.basename(file.name)
         )
     

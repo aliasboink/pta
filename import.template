@@ -34,6 +34,12 @@ CONFIG = [
       debit_dict=bt_debit_dict,
       credit_dict=bt_credit_dict,
     ),
+    bt.Importer(
+      currency="USD",
+      bank_account="Assets:Bank:BT-USD",
+      debit_dict=bt_debit_dict,
+      credit_dict=bt_credit_dict,
+    ),
     revolut.Importer(
       currency="RON",
       bank_account="Assets:Bank:Revolut",

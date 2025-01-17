@@ -21,3 +21,6 @@ move:
 
 extract:
     bean-extract -f main.beancount -e main.beancount main.import ~/Downloads > tmp.beancount
+
+append:
+    head -n -1 tmp.beancount  >> main.beancount
