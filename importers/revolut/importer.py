@@ -49,7 +49,7 @@ class Importer(importer.ImporterProtocol):
 
                 debit_account = "Expenses:Unknown"
                 for vendor, account in self.debit_dict.items():
-                    if re.search(vendor, desc):
+                    if re.search(vendor, desc, flags=re.IGNORECASE):
                         debit_account = account
                         break
                     
@@ -72,7 +72,7 @@ class Importer(importer.ImporterProtocol):
 
                 credit_account = "Income:Unknown"
                 for vendor, account in self.credit_dict.items():
-                    if re.search(vendor, desc):
+                    if re.search(vendor, desc, flags=re.IGNORECASE):
                         credit_account = account
                         break
                     
